@@ -1,0 +1,171 @@
+"use client";
+
+import React from 'react'
+import { motion } from "motion/react";
+import { Button } from '@/components/ui/button';
+import { TypedDescription } from './TypedDescription';
+
+type Props = {}
+
+const benefits = [
+  "AI-native architecture",
+  "Enterprise workflows",
+  "End-to-end delivery",
+];
+
+const HeroDetails = (props: Props) => {
+  return (
+    <section className="relative overflow-hidden lg:py-16 p-4 text-white lg:flex-1">
+      {/* Animated grid */}
+      {/* <motion.div
+        className="pointer-events-none absolute inset-0 opacity-50"
+        style={{
+          backgroundImage: `
+            linear-gradient(rgba(239,68,68,0.20) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(239,68,68,0.20) 1px, transparent 1px)
+          `,
+          backgroundSize: "34px 34px",
+        }}
+        animate={{
+          backgroundPosition: ["0px 0px", "34px 34px"],
+        }}
+        transition={{
+          duration: 8,
+          repeat: Infinity,
+          ease: "linear",
+        }}
+      /> */}
+
+      {/* Ambient glow */}
+      {/* <motion.div
+        className="pointer-events-none absolute left-[20%] top-[10%] h-[380px] w-[380px] rounded-ful"
+        animate={{
+          x: [0, 40, -20, 0],
+          y: [0, -20, 20, 0],
+          scale: [1, 1.08, 0.96, 1],
+        }}
+        transition={{
+          duration: 12,
+          repeat: Infinity,
+          ease: "easeInOut",
+        }}
+      /> */}
+      <div className="relative mx-auto flex max-w-7xl items-center">
+        <div className="max-w-[760px]">
+          {/* Eyebrow */}
+          <motion.div
+            initial={{ opacity: 0, y: 14 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.55, delay: 0.1 }}
+            className="mb-7 inline-flex items-center gap-2 rounded-full border border-blue-500/30 bg-blue-500/10 px-3 py-1.5"
+          >
+            <motion.span
+              className="h-1.5 w-1.5 rounded-full bg-cyan-400"
+              animate={{
+                opacity: [1, 0.35, 1],
+                boxShadow: [
+                  "0 0 6px rgba(34,211,238,.5)",
+                  "0 0 14px rgba(34,211,238,1)",
+                  "0 0 6px rgba(34,211,238,.5)",
+                ],
+              }}
+              transition={{
+                duration: 1.8,
+                repeat: Infinity,
+                ease: "easeInOut",
+              }}
+            />
+
+            <span className="text-[10px] font-medium uppercase tracking-wide text-slate-300">
+              Building the intelligent business layer
+            </span>
+          </motion.div>
+
+          {/* Heading */}
+          <motion.h1
+            initial={{ opacity: 0, y: 30, filter: "blur(10px)" }}
+            animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+            transition={{
+              duration: 0.8,
+              delay: 0.2,
+              ease: [0.22, 1, 0.36, 1],
+            }}
+            className="max-w-[720px] text-[48px] font-bold leading-[1.03] text-white sm:text-[58px] lg:text-[64px]"
+          >
+            We engineer the
+            <br />
+            systems behind
+            <br />
+            modern business.
+          </motion.h1>
+
+          {/* Description */}
+          <TypedDescription />
+
+          {/* CTA */}
+          <motion.div
+            initial={{ opacity: 0, y: 18 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.65, delay: 0.6 }}
+            className="mt-7 flex flex-wrap items-center gap-3"
+          >
+            <motion.div
+              whileHover={{ y: -2, scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
+            >
+              <Button
+                size="lg"
+                className="h-11 rounded-xl bg-blue-500 px-6 text-sm font-medium text-white shadow-[0_0_30px_rgba(59,130,246,.18)] transition-shadow hover:bg-blue-600 hover:shadow-[0_0_40px_rgba(59,130,246,.35)]"
+              >
+                Start a project
+              </Button>
+            </motion.div>
+
+            <motion.div whileHover={{ y: -2 }} whileTap={{ scale: 0.98 }}>
+              <Button
+                size="lg"
+                variant="outline"
+                className="h-11 rounded-xl border-blue-400/25 bg-blue-950/30 px-6 text-sm text-white backdrop-blur-sm hover:bg-blue-950/50 hover:text-white"
+              >
+                See our capabilities
+              </Button>
+            </motion.div>
+          </motion.div>
+
+          {/* Benefits */}
+          <motion.div
+            initial="hidden"
+            animate="show"
+            variants={{
+              hidden: {},
+              show: {
+                transition: {
+                  staggerChildren: 0.12,
+                  delayChildren: 0.75,
+                },
+              },
+            }}
+            className="mt-5 flex flex-wrap gap-x-7 gap-y-3"
+          >
+            {benefits.map((benefit) => (
+              <motion.div
+                key={benefit}
+                variants={{
+                  hidden: { opacity: 0, x: -8 },
+                  show: { opacity: 1, x: 0 },
+                }}
+                transition={{ duration: 0.4 }}
+                className="flex items-center gap-2 text-[11px] text-slate-400"
+              >
+                <span className="h-1.5 w-1.5 rounded-full bg-emerald-400 shadow-[0_0_8px_rgba(52,211,153,0.7)]" />
+                {benefit}
+              </motion.div>
+            ))}
+          </motion.div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+export default HeroDetails
