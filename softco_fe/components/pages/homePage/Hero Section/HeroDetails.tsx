@@ -4,6 +4,7 @@ import React from 'react'
 import { motion } from "motion/react";
 import { Button } from '@/components/ui/button';
 import { TypedDescription } from './TypedDescription';
+import { Eyebrow } from '@/components/Shared/Eyebrow';
 
 type Props = {}
 
@@ -53,33 +54,7 @@ const HeroDetails = (props: Props) => {
       <div className="relative mx-auto flex max-w-7xl items-center">
         <div className="max-w-[760px]">
           {/* Eyebrow */}
-          <motion.div
-            initial={{ opacity: 0, y: 14 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.55, delay: 0.1 }}
-            className="mb-7 inline-flex items-center gap-2 rounded-full border border-blue-500/30 bg-blue-500/10 px-3 py-1.5"
-          >
-            <motion.span
-              className="h-1.5 w-1.5 rounded-full bg-cyan-400"
-              animate={{
-                opacity: [1, 0.35, 1],
-                boxShadow: [
-                  "0 0 6px rgba(34,211,238,.5)",
-                  "0 0 14px rgba(34,211,238,1)",
-                  "0 0 6px rgba(34,211,238,.5)",
-                ],
-              }}
-              transition={{
-                duration: 1.8,
-                repeat: Infinity,
-                ease: "easeInOut",
-              }}
-            />
-
-            <span className="text-[10px] font-medium uppercase tracking-wide text-slate-300">
-              Building the intelligent business layer
-            </span>
-          </motion.div>
+          <Eyebrow>Building the intelligent business layer</Eyebrow>
 
           {/* Heading */}
           <motion.h1

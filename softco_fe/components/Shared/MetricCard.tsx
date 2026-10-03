@@ -65,7 +65,7 @@ export function MetricCard({
   return (
     <GlowPanel className="min-h-[116px]">
       <div className="flex h-full flex-col justify-center">
-        <h3 className="text-[30px] font-semibold leading-none tracking-[-0.03em] text-white">
+        <h3 className="text-[24px] font-semibold leading-none tracking-[-0.03em] text-white">
           {title}
         </h3>
 
