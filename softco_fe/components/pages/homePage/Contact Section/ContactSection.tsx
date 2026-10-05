@@ -37,7 +37,7 @@ const techItemVariants = {
     y: 0,
     transition: {
       duration: 0.45,
-      ease: [0.22, 1, 0.36, 1] as const,
+      ease: [0.22, 1, 0.36, 1] as [number, number, number, number],
     },
   },
 };
@@ -54,7 +54,7 @@ const cardVariants = {
     scale: 1,
     transition: {
       duration: 0.75,
-      ease: [0.22, 1, 0.36, 1] as const,
+      ease: [0.22, 1, 0.36, 1] as [number, number, number, number],
     },
   },
 };
@@ -79,7 +79,7 @@ const fadeUpVariants = {
     y: 0,
     transition: {
       duration: 0.55,
-      ease: [0.22, 1, 0.36, 1] as const,
+      ease: [0.22, 1, 0.36, 1] as [number, number, number, number],
     },
   },
 };

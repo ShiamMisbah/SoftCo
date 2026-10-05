@@ -20,7 +20,7 @@ const fadeUp = {
     filter: "blur(0px)",
     transition: {
       duration: 0.7,
-      ease: [0.22, 1, 0.36, 1],
+      ease: [0.22, 1, 0.36, 1] as [number, number, number, number],
     },
   },
 };

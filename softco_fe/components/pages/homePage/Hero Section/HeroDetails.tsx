@@ -29,7 +29,7 @@ const HeroDetails = (props: Props) => {
             transition={{
               duration: 0.8,
               delay: 0.2,
-              ease: [0.22, 1, 0.36, 1],
+              ease: [0.22, 1, 0.36, 1] as [number, number, number, number],
             }}
             className="max-w-[720px] text-[48px] font-bold leading-[1.03] text-white sm:text-[58px] lg:text-[64px] mt-8"
           >

@@ -2,10 +2,10 @@
 
 import { motion } from "motion/react";
 import { ArrowUpRight } from "lucide-react";
-import ServiceRow, { service } from "./ServiceRow";
+import ServiceRow, { Service } from "./ServiceRow";
 import SectionHeading from "@/components/Shared/SectionHeading";
 
-const services : service[] = [
+const services : Service[] = [
   {
     number: "01",
     title: "Business Platforms",

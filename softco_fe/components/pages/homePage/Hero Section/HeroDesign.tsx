@@ -17,7 +17,7 @@ const cardEnter = {
     transition: {
       duration: 0.7,
       delay,
-      ease: [0.22, 1, 0.36, 1],
+      ease: [0.22, 1, 0.36, 1] as [number, number, number, number],
     },
   }),
 };
@@ -30,7 +30,7 @@ const HeroDesign = (props: Props) => {
           initial={{ opacity: 0, scale: 0.96, y: 20, filter: "blur(14px)" }}
           whileInView={{ opacity: 1, scale: 1, y: 0, filter: "blur(0px)" }}
           viewport={{ once: true, amount: 0.25 }}
-          transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
+          transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] as [number, number, number, number] }}
           className="relative rounded-[36px] border border-cyan-400/15 bg-[radial-gradient(circle_at_center,rgba(48,104,255,0.08),rgba(5,9,17,0.96)_65%)] p-5 sm:p-8"
         >
 
