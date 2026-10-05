@@ -24,7 +24,7 @@ const cardEnter = {
 
 const HeroDesign = (props: Props) => {
   return (
-    <section className="w-full relative overflow-hidden  lg:py-16 p-4 text-white lg:flex-1">
+    <section className="w-full relative overflow-hidden text-white lg:flex-1">
       <div className="mx-auto max-w-6xl">
         <motion.div
           initial={{ opacity: 0, scale: 0.96, y: 20, filter: "blur(14px)" }}

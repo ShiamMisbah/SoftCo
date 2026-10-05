@@ -18,7 +18,7 @@ const LandingPage = (props: Props) => {
       <BusinessSection />
       <AiSection />
       <StatsSection />
-      <ProductPipelineSection />
+      {/* <ProductPipelineSection /> */}
       <ContactSection />
     </div>
   );

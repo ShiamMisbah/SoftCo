@@ -3,6 +3,7 @@
 import { motion } from "motion/react";
 import { ArrowUpRight } from "lucide-react";
 import ServiceRow, { service } from "./ServiceRow";
+import SectionHeading from "@/components/Shared/SectionHeading";
 
 const services : service[] = [
   {
@@ -60,18 +61,13 @@ const containerVariants = {
 
 const BusinessSection = (props: Props) => {
   return (
-    <section className="bg-[#f6fbff] py-14 sm:py-20">
-      <div className="flex flex-col gap-4 text-center">
-        <span className="text-xs text-primary font-bold">CAPABILITIES</span>
-        <h1 className="text-[42px] text-[#090E17] font-bold">
-          Build the layer your business is missing.
-        </h1>
-        <p className="text-[16px] text-gray-600">
-          Strategy, UX, engineering, integration and cloud delivery across
-          business systems and customer products.
-        </p>
-      </div>
-      <div className="container mx-auto pt-16  px-4 sm:px-6 lg:px-8">
+    <section className="bg-[#f6fbff] py-14 sm:py-20 px-4 lg:px-8">
+      <SectionHeading
+        label="CAPABILITIES"
+        title="Build the layer your business is missing."
+        description="Strategy, UX, engineering, integration and cloud delivery across business systems and customer products."
+      />
+      <div className="container mx-auto pt-16 sm:px-6 lg:px-8">
         <motion.div
           variants={containerVariants}
           initial="hidden"

@@ -16,41 +16,7 @@ const benefits = [
 
 const HeroDetails = (props: Props) => {
   return (
-    <section className="relative overflow-hidden lg:py-16 p-4 text-white lg:flex-1">
-      {/* Animated grid */}
-      {/* <motion.div
-        className="pointer-events-none absolute inset-0 opacity-50"
-        style={{
-          backgroundImage: `
-            linear-gradient(rgba(239,68,68,0.20) 1px, transparent 1px),
-            linear-gradient(90deg, rgba(239,68,68,0.20) 1px, transparent 1px)
-          `,
-          backgroundSize: "34px 34px",
-        }}
-        animate={{
-          backgroundPosition: ["0px 0px", "34px 34px"],
-        }}
-        transition={{
-          duration: 8,
-          repeat: Infinity,
-          ease: "linear",
-        }}
-      /> */}
-
-      {/* Ambient glow */}
-      {/* <motion.div
-        className="pointer-events-none absolute left-[20%] top-[10%] h-[380px] w-[380px] rounded-ful"
-        animate={{
-          x: [0, 40, -20, 0],
-          y: [0, -20, 20, 0],
-          scale: [1, 1.08, 0.96, 1],
-        }}
-        transition={{
-          duration: 12,
-          repeat: Infinity,
-          ease: "easeInOut",
-        }}
-      /> */}
+    <section className="relative overflow-hidden xl:py-16 p-4 text-white lg:flex-1">
       <div className="relative mx-auto flex max-w-7xl items-center">
         <div className="max-w-[760px]">
           {/* Eyebrow */}
@@ -65,7 +31,7 @@ const HeroDetails = (props: Props) => {
               delay: 0.2,
               ease: [0.22, 1, 0.36, 1],
             }}
-            className="max-w-[720px] text-[48px] font-bold leading-[1.03] text-white sm:text-[58px] lg:text-[64px]"
+            className="max-w-[720px] text-[48px] font-bold leading-[1.03] text-white sm:text-[58px] lg:text-[64px] mt-8"
           >
             We engineer the
             <br />

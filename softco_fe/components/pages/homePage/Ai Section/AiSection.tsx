@@ -39,8 +39,8 @@ const leftContainer = {
 
 const AiSection = (props: Props) => {
   return (
-    <section className="overflow-hidden bg-[#050911] py-16 text-white sm:py-20 lg:py-24">
-      <div className="container mx-auto grid gap-12 px-4 lg:grid-cols-[0.82fr_1.18fr] lg:items-center lg:px-8">
+    <section className="overflow-hidden bg-[#050911] py-16 text-white sm:py-20 lg:py-24 px-4">
+      <div className="container mx-auto grid gap-12 lg:grid-cols-[0.82fr_1.18fr] lg:items-center lg:px-8">
         <motion.div
           variants={leftContainer}
           initial="hidden"
