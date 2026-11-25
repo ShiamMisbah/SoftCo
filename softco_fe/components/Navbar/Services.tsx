@@ -5,6 +5,7 @@ import { motion } from "motion/react";
 type Props = {
   mobile?: boolean;
   onNavigate?: () => void;
+  scrolled: boolean;
 };
 
 const navItems = [
@@ -30,7 +31,7 @@ const navItems = [
   },
 ];
 
-const Services = ({ mobile = false, onNavigate }: Props) => {
+const Services = ({ mobile = false, onNavigate, scrolled }: Props) => {  
   if (mobile) {
     return (
       <motion.ul
@@ -92,7 +93,9 @@ const Services = ({ mobile = false, onNavigate }: Props) => {
   }
 
   return (
-    <ul className="flex gap-5 text-sm font-medium text-[#B2C2D9]">
+    <ul
+      className={`flex gap-5 text-sm font-medium ${scrolled ? "text-[#B2C2D9]" : "text-slate-400"} `}
+    >
       {navItems.map((item) => (
         <li key={item.label}>
           <a

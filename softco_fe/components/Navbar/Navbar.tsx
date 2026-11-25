@@ -93,7 +93,7 @@ const Navbar = () => {
 
           {/* Desktop navigation */}
           <div className="hidden lg:block">
-            <Services />
+            <Services scrolled={scrolled} />
           </div>
 
           {/* Desktop CTA */}
@@ -102,7 +102,7 @@ const Navbar = () => {
               className={
                 scrolled
                   ? "bg-blue-600 text-white hover:bg-blue-500"
-                  : "bg-white/10 text-white backdrop-blur-md hover:bg-white/15"
+                  : "bg-slate-800/50 text-white backdrop-blur-md hover:bg-slate-800/15"
               }
             >
               Build with Us
@@ -224,7 +224,11 @@ const Navbar = () => {
               "
             >
               <div className="flex flex-col p-5">
-                <Services mobile onNavigate={() => setMobileOpen(false)} />
+                <Services
+                  mobile
+                  onNavigate={() => setMobileOpen(false)}
+                  scrolled={scrolled}
+                />
 
                 <motion.div
                   initial={{

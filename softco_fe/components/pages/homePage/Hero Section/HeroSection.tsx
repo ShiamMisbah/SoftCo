@@ -2,6 +2,9 @@ import React from 'react'
 import HeroDetails from './HeroDetails'
 import HeroDesign from './HeroDesign'
 import { Dot } from 'lucide-react'
+import hero_bg from "@/assets/backgrounds/hero_bg.png"
+import Image from 'next/image'
+import FluidBackground from '@/components/Shared/FluidBackground'
 
 type Props = {}
 
@@ -18,17 +21,29 @@ const capabilities = [
 
 const HeroSection = (props: Props) => {
   return (
-    <div className="bg-card-dark pt-28">
-      <div className="container mx-auto flex flex-col xl:flex-row justify-between items-start lg:px-8 gap-10  text-white">
+    <div className="bg-blue-50 pt-28">
+      {/* Fluid background */}
+      <FluidBackground
+        colorFrom="#2563EB"
+        colorTo="#38BDF8"
+        intensity={0.5}
+        opacity={0.15}
+        className="left-[35%] -right-[15%]"
+      />
+      <div className="container mx-auto flex flex-col lg:flex-row justify-between items-center lg:px-8 gap-4  text-white z-10">
         <HeroDetails />
-        <HeroDesign />
+        <div className="w-full flex-1">
+          <Image src={hero_bg} alt="hero_bg" />
+        </div>
+
+        {/* <HeroDesign /> */}
       </div>
-      <div className="flex flex-wrap items-center justify-center gap-y-2 py-8 ">
+      <div className="flex flex-wrap items-center justify-center gap-y-2 py-8 z-10">
         {capabilities.map((item, index) => (
           <div key={item.label} className="flex items-center">
             <span
               className={`whitespace-nowrap text-[10px] sm:text-xs ${
-                item.active ? "text-[#1ACCEB]" : "text-[#8CA3C2]"
+                item.active ? "text-blue-500" : "text-slate-400"
               }`}
             >
               {item.label}

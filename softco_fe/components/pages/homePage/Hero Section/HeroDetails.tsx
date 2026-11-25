@@ -18,9 +18,11 @@ const HeroDetails = (props: Props) => {
   return (
     <section className="relative overflow-hidden xl:py-16 p-4 text-white lg:flex-1">
       <div className="relative mx-auto flex max-w-7xl items-center">
-        <div className="max-w-[760px]">
+        <div className="max-w-full">
           {/* Eyebrow */}
-          <Eyebrow>Building the intelligent business layer</Eyebrow>
+          <h4 className="text-blue-500">
+            Software built around the way you work
+          </h4>
 
           {/* Heading */}
           <motion.h1
@@ -31,17 +33,18 @@ const HeroDetails = (props: Props) => {
               delay: 0.2,
               ease: [0.22, 1, 0.36, 1] as [number, number, number, number],
             }}
-            className="max-w-[720px] text-[48px] font-bold leading-[1.03] text-white sm:text-[58px] lg:text-[64px] mt-8"
+            className="max-w-[720px] text-[32px] font-bold leading-[1.03] text-black sm:text-[48px] mt-8"
           >
-            We engineer the
-            <br />
-            systems behind
-            <br />
-            modern business.
+            YOUR TAILORED<br></br>BUSINESS SOFTWARE
           </motion.h1>
 
           {/* Description */}
-          <TypedDescription />
+          <TypedDescription>
+            Some businesses need a better way to follow up with customers.
+            Others need an app for a new service or a system that brings
+            scattered information together. SoftCo builds software for those
+            kinds of challenges, from our base in Dhaka.
+          </TypedDescription>
 
           {/* CTA */}
           <motion.div
@@ -68,40 +71,9 @@ const HeroDetails = (props: Props) => {
                 variant="outline"
                 className="h-11 rounded-xl border-blue-400/25 bg-blue-950/30 px-6 text-sm text-white backdrop-blur-sm hover:bg-blue-950/50 hover:text-white"
               >
-                See our capabilities
+                Explore our services
               </Button>
             </motion.div>
-          </motion.div>
-
-          {/* Benefits */}
-          <motion.div
-            initial="hidden"
-            animate="show"
-            variants={{
-              hidden: {},
-              show: {
-                transition: {
-                  staggerChildren: 0.12,
-                  delayChildren: 0.75,
-                },
-              },
-            }}
-            className="mt-5 flex flex-wrap gap-x-7 gap-y-3"
-          >
-            {benefits.map((benefit) => (
-              <motion.div
-                key={benefit}
-                variants={{
-                  hidden: { opacity: 0, x: -8 },
-                  show: { opacity: 1, x: 0 },
-                }}
-                transition={{ duration: 0.4 }}
-                className="flex items-center gap-2 text-[11px] text-slate-400"
-              >
-                <span className="h-1.5 w-1.5 rounded-full bg-emerald-400 shadow-[0_0_8px_rgba(52,211,153,0.7)]" />
-                {benefit}
-              </motion.div>
-            ))}
           </motion.div>
         </div>
       </div>
