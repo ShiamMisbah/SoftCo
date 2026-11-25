@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "motion/react";
+import Link from "next/link";
 
 type Props = {
   mobile?: boolean;
@@ -66,7 +67,7 @@ const Services = ({ mobile = false, onNavigate, scrolled }: Props) => {
               },
             }}
           >
-            <a
+            <Link
               href={item.href}
               onClick={onNavigate}
               className="
@@ -85,7 +86,7 @@ const Services = ({ mobile = false, onNavigate, scrolled }: Props) => {
               <span className="translate-x-0 text-sm text-white/30 transition-all group-hover:translate-x-1 group-hover:text-white">
                 ↗
               </span>
-            </a>
+            </Link>
           </motion.li>
         ))}
       </motion.ul>
@@ -97,14 +98,13 @@ const Services = ({ mobile = false, onNavigate, scrolled }: Props) => {
       className={`flex gap-5 text-sm font-medium ${scrolled ? "text-[#B2C2D9]" : "text-slate-400"} `}
     >
       {navItems.map((item) => (
-        <li key={item.label}>
-          <a
-            href={item.href}
-            className="transition-colors duration-200 hover:text-white"
-          >
-            {item.label}
-          </a>
-        </li>
+        <Link
+          key={item.label}
+          href={item.href}
+          className="transition-colors duration-300 hover:text-primary"
+        >
+          {item.label}
+        </Link>
       ))}
     </ul>
   );

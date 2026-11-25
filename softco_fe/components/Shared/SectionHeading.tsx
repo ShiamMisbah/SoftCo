@@ -5,7 +5,7 @@
 import { motion } from "framer-motion";
 
 interface SectionHeadingProps {
-  label: string;
+  label?: string;
   title: string;
   description?: string;
   className?: string;
@@ -52,12 +52,13 @@ export default function SectionHeading({
       }}
       className={`flex flex-col gap-4 text-center ${className}`}
     >
-      <motion.span
+      {label && (<motion.span
         variants={itemVariants}
         className="text-xs font-bold text-primary"
       >
         {label}
-      </motion.span>
+      </motion.span>)
+      }
 
       <motion.h2
         variants={itemVariants}

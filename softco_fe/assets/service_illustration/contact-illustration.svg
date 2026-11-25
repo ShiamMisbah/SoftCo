@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 370 260" fill="none" color="#FFFFFF" role="img" aria-label="Two overlapping conversation bubbles">
+  <g fill="currentColor">
+    <circle cx="137" cy="130" r="86" opacity=".09"/>
+    <circle cx="232" cy="130" r="86" opacity=".09"/>
+    <g transform="translate(0 11) scale(1.32142857)">
+      <path d="M45 40 H151 Q165 40 165 54 V103 Q165 117 151 117 H87 L61 139 V117 H45 Q31 117 31 103 V54 Q31 40 45 40Z" opacity=".3"/>
+      <path fill-rule="evenodd" d="M125 65 H231 Q245 65 245 79 V128 Q245 142 231 142 H219 V164 L191 142 H125 Q111 142 111 128 V79 Q111 65 125 65Z M157 103 A6 6 0 1 0 145 103 A6 6 0 1 0 157 103Z M184 103 A6 6 0 1 0 172 103 A6 6 0 1 0 184 103Z M211 103 A6 6 0 1 0 199 103 A6 6 0 1 0 211 103Z"/>
+    </g>
+  </g>
+</svg>
